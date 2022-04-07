@@ -41,6 +41,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'taggit',
 ]
 
 LOCAL_APPS = []
