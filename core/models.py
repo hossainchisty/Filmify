@@ -4,7 +4,7 @@ from django.db import models
 class TimestampedModel(models.Model):
     """
     An abstract base class model that provides self-updating
-    ``created`` and ``modified`` fields.
+    ``created_at`` and ``updated_at`` fields.
     """
     # A timestamp representing when this object was created.
     created_at = models.DateTimeField(auto_now_add=True)
