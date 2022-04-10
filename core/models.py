@@ -19,3 +19,22 @@ class TimestampedModel(models.Model):
         # per-model basis as needed, but reverse-chronological is a good
         # default ordering for most models.
         ordering = ['-created_at', '-updated_at']
+
+
+class PublishStateOptions(models.TextChoices):
+    # CONSTANT = DB_VALUE, USER_DISPLAY_VALUE
+    PUBLISH = 'PU', 'Publish'
+    DRAFT = 'DR', 'Draft'
+    UNLISTED = 'UN', 'Unlisted'
+    PRIVATE = 'PR', 'Private'
+    REMOVED = 'RE', 'Removed'
+
+
+class MovieStatusOptions(models.TextChoices):
+    DRAFT = 'DR', 'Draft'
+    PLANNED = 'PL', 'Planned'
+    REMOVED = 'RE', 'Removed'
+    RELEASED = 'RE', 'Released'
+    CANCELLED = 'CA', 'Cancelled'
+    INPRODUCTION = 'IP', 'In Production'
+    POSTPRODUCTION = 'PP', 'Post Production'
