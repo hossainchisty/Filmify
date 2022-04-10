@@ -34,7 +34,7 @@ class MovieStatusOptions(models.TextChoices):
     DRAFT = 'DR', 'Draft'
     PLANNED = 'PL', 'Planned'
     REMOVED = 'RE', 'Removed'
-    RELEASED = 'RE', 'Released'
+    RELEASED = 'RD', 'Released'
     CANCELLED = 'CA', 'Cancelled'
     INPRODUCTION = 'IP', 'In Production'
     POSTPRODUCTION = 'PP', 'Post Production'
