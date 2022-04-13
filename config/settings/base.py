@@ -44,7 +44,16 @@ THIRD_PARTY_APPS = [
     'taggit',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'tvshows.apps.TvshowsConfig',
+    'videos.apps.VideosConfig',
+    'profiles.apps.ProfilesConfig',
+    'movies.apps.MoviesConfig',
+    'core.apps.CoreConfig',
+    'celebs.apps.CelebsConfig',
+    'awards_and_events.apps.AwardsAndEventsConfig',
+
+]
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
