@@ -51,6 +51,7 @@ LOCAL_APPS = [
     'movies.apps.MoviesConfig',
     'core.apps.CoreConfig',
     'celebs.apps.CelebsConfig',
+    'reviews.apps.ReviewsConfig',
     'awards_and_events.apps.AwardsAndEventsConfig',
 
 ]
