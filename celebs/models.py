@@ -39,3 +39,7 @@ class Celebrity(models.Model):
     recently_viewed = models.DateTimeField(auto_now_add=True)
 
     date_joined = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        ''' String for representing the Model'''
+        return self.name
