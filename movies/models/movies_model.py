@@ -29,14 +29,10 @@ class Movie(TimestampedModel):
         max_length=50,
         blank=True, null=True
     )
-    image = models.ImageField(upload_to='movies')
+    image = models.URLField(null=True, blank=True)
     director = models.CharField(max_length=10)
     writer = models.CharField(max_length=10)
-    cast = models.ForeignKey(
-        Celebrity,
-        on_delete=models.DO_NOTHING,
-        null=True, blank=True,
-    )
+    cast = models.ManyToManyField(Celebrity)
     awards = models.ManyToManyField(Award)
     status = models.CharField(
         max_length=2,
@@ -63,7 +59,7 @@ class Movie(TimestampedModel):
 
     popularity = models.IntegerField()
     is_trending = models.BooleanField(default=False)
-    # TODO: is_featured = models.BooleanField(default=False)
+    is_featured = models.BooleanField(default=False)
     is_watched = models.BooleanField(default=False)
 
     recently_watched = models.BooleanField(default=False)
@@ -75,3 +71,7 @@ class Movie(TimestampedModel):
         on_delete=models.CASCADE,
         null=True, blank=True
     )
+
+    def __str__(self):
+        '''String representation of the model'''
+        return self.title
