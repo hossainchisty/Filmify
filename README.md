@@ -22,5 +22,5 @@ Find your next movie or create your watchlist with this App. It include reviews,
 
 - ✅ User can see their recently viewed TV shows & Movies.
 
-***⏳Working in progress...***
+***📍Deprecated***
 
